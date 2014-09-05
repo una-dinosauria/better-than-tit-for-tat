@@ -7,12 +7,13 @@
 
 %% Define parameters for the simulation
 
-popsz   = 10; % Population size.
+popsz     = 100; % Population size.
+pmutatnts = .05; % Ratio of mutants.
 mp      = 0.01; % Mutation probability.
 payoff  = [3, 0, 5, 1]; % Create our payoff values [R, S, T, P].
 % Create an initial population, initialized as all in 0.5.
 pop     = zeros(popsz, 4) + 0.5;
-n_iterations = 1e5;
+n_iterations = 1e4;
 
 history = zeros( n_iterations, popsz, 4);
 
@@ -45,14 +46,15 @@ for i=1:n_iterations,
 
     if rand < mp,
         % Generate a mutant!
-        mutant = create_mutants(1);
-        next_gen( randi(popsz, 1), : ) = mutant;
+        nmutants = floor( popsz * pmutatnts );
+        mutants = create_mutants( nmutants );
+        next_gen( randi(popsz, [nmutants,1]), : ) = mutants;
     end
 
     % Replace the old population with the new one.
     pop = next_gen;
 
-    if mod(i, 100) == 0,
+    if mod(i, 10) == 0,
         fprintf('Done with iteration %d / %d = %f %%.\n', i, n_iterations, 100*i/n_iterations);
     end
 
