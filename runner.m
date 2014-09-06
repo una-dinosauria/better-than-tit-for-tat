@@ -7,8 +7,8 @@
 
 %% Define parameters for the simulation
 
-popsz     = 10; % Population size.
-pmutatnts = .1; % Ratio of mutants.
+popsz     = 20; % Population size.
+pmutatnts = .05; % Ratio of mutants.
 mp      = 0.01; % Mutation probability.
 payoff  = [3, 0, 5, 1]; % Create our payoff values [R, S, T, P].
 % Create an initial population, initialized as all in 0.5.
