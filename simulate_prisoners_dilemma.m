@@ -15,6 +15,8 @@ function [ pi ] = simulate_prisoners_dilemma( A, B )
 % --
 % Julieta
 
+n=4;
+
 % Get ammenable names for the different probabilities.
 % Probabilities for player 1.
 r1 = A(1);
@@ -43,7 +45,15 @@ P = [r1*r2,  r1*(1-r2),  (1-r1)*r2,  (1-r1)*(1-r2);  % CC
 % Solve for the eigenvector with eigenvalue 1. 
 % After some benchmarking, this turns out to be the fastest method in
 % matlab.
-pi = [1,2,3,4] * P^100;
+
+% A = P' - eye(n);
+% A(n,:) = ones(1,n);
+% b = zeros(n,1);
+% b(n) = 1;
+% pi = A\b;
+
+pi = rand(1,4) * P^100;
+pi = pi ./ sum( pi );
 
 
 % The distribution is indeed stationary.
