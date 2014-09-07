@@ -13,7 +13,9 @@ Which shows the dominance of Pavlov for long periods of time.
 
 ## The Blog Post
 
-I wrote a blog post analyzing the paper on my blog [over here](http://jltmtz.github.io/game%20theory/2014/09/03/better-than-tit-for-that/). The 2 main contributions of the paper, which end up evolving a strategy that outperforms tit-for-tat reside in
+I wrote a [blog post](http://jltmtz.github.io/game%20theory/2014/09/03/better-than-tit-for-that/) analyzing the paper.  The 2 main contributions of the paper, which end up evolving a strategy that outperforms tit-for-tat reside in
 
 * Noting that in the real world it is very hard to follow a deterministic strategy. Therefore, it makes more sense to represent strategies as probabilities
 * Demonstrating that it is possible to efficiently simulate large populations and iterations of the Prisoner's Dilemma under these conditions
+
+But of course, check the blog to see the details.
