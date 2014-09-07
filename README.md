@@ -5,17 +5,15 @@ A small piece of matlab code that aims at reproducing the results of Nowak and S
 
 The surprising result is that a simple strategy called Pavlov (due to the work of Ivan Pavlov on [classical conditioning](http://en.wikipedia.org/wiki/Classical_conditioning)), fares better population-wise than tit-for-tat, whose success in Axelrod's Tournaments received widespread attention.
 
-The code reproduces the main figure of the paper, which shows Pavlov outperforming tit-for-tat in the long run. The figure that is reproduced is
+The code reproduces the main figure of the paper, which shows Pavlov outperforming tit-for-tat in the long run:
 
 ![Prisoner's Dilemma with pop size of 100](http://jltmtz.github.io/assets/images/pop100.png)
 
-Which shows the dominance of Pavlov for long periods of time.
-
 ## The Blog Post
 
-I wrote a [blog post](http://jltmtz.github.io/game%20theory/2014/09/03/better-than-tit-for-that/) analyzing the paper.  The 2 main contributions of the paper, which end up evolving a strategy that outperforms tit-for-tat reside in
+I wrote a [blog post](http://jltmtz.github.io/game%20theory/2014/09/03/better-than-tit-for-that/) analyzing the paper.  Its 2 main contributions, which end up evolving a strategy that outperforms tit-for-tat reside in
 
 * Noting that in the real world it is very hard to follow a deterministic strategy. Therefore, it makes more sense to represent strategies as probabilities
 * Demonstrating that it is possible to efficiently simulate large populations and iterations of the Prisoner's Dilemma under these conditions
 
-But of course, check the blog to see the details.
+Of course, check the blog post to see the details.
